@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class ApiCategoryController extends Controller
 {
     public function getList() {
-        return response()->json(Category::orderByDesc('id')->get(),200);
+        return response()->json(
+            Category::orderByDesc('id')->with('Photo')->get(),200);
     }
 }

@@ -16,6 +16,8 @@ Route::group(['prefix' => 'auth'],function (){
 
     Route::get('categories', 'ApiCategoryController@getList');
 
+    Route::get('category/{id}', 'ApiCategoryController@getProductsList');
+
 
     Route::post('login', 'ApiUserController@login');
     Route::post('register', 'ApiUserController@register');

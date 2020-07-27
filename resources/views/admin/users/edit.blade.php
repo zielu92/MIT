@@ -17,7 +17,7 @@
 
         <div class="row">
             <h4>Edit user</h4>
-            {!! Form::model($user,['method'=>'POST', 'action'=>['AdminUserController@update',$user->id], 'files'=>true]) !!}
+            {!! Form::model($user,['method'=>'PATCH', 'action'=>['AdminUserController@update',$user->id], 'files'=>true]) !!}
             <div class="row">
                 <div class="form-group col-md-6">
                     {!! Form::label('name', 'Name') !!}

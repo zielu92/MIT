@@ -101,10 +101,7 @@ class AdminUserController extends Controller
     public function update(Request $request, $id)
     {
         if(Auth::user()->isAdmin()) {
-            $photo = new Photo();
-
             $user = User::findOrFail($id);
-
             if (trim($request->password) == '') {
                 $data = $request->except('password');
             } else {

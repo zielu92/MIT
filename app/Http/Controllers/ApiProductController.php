@@ -9,6 +9,6 @@ class ApiProductController extends Controller
 {
     public function showProduct($id) {
         return response()->json(
-            Product::findOrFail($id)->with('Photo')->get(),200);
+            Product::where('id',$id)->with('Photo')->get(),200);
     }
 }

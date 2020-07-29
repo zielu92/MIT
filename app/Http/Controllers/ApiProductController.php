@@ -14,6 +14,10 @@ class ApiProductController extends Controller
             Product::where('id',$id)->with('Photo')->get(),200);
     }
 
+    public function randomProducts() {
+        return response()->json(
+            Product::inRandomOrder()->with('Photo')->limit(4)->get(),200);
+    }
     public function storeProduct(Request $request) {
         $request->validate([
             'title'=>'required',

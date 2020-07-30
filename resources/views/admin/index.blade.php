@@ -22,7 +22,7 @@
                                 <i class="fa fa-user fa-5x"></i>
                             </div>
                             <div class="col-xs-6 text-right">
-                                <p class="announcement-heading">456</p>
+                                <p class="announcement-heading">{{$stat['users']}}</p>
                                 <p class="announcement-text">Users!</p>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                 <i class="fa fa-gift fa-5x"></i>
                             </div>
                             <div class="col-xs-6 text-right">
-                                <p class="announcement-heading">12</p>
+                                <p class="announcement-heading">{{$stat['products']}}</p>
                                 <p class="announcement-text">Products</p>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                                 <i class="fa fa-shopping-cart fa-5x"></i>
                             </div>
                             <div class="col-xs-6 text-right">
-                                <p class="announcement-heading">18</p>
+                                <p class="announcement-heading">{{$stat['orders']}}</p>
                                 <p class="announcement-text">Orders</p>
                             </div>
                         </div>

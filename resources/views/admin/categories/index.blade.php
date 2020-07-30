@@ -23,7 +23,6 @@
                 {!! Form::text('name', null, ['class'=>'form-control']) !!}
             </div>
 
-
             <div class="form-group col-md-6">
                 {!! Form::label('photo', 'Icon') !!}
                 {!! Form::file('photo', ['class'=>'form-control-file']) !!}

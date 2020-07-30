@@ -17,11 +17,16 @@
 
         <div class="row">
             <h4>Add new category</h4>
-            {!! Form::model($category,['method'=>'PUT', 'action'=>['AdminCategoryController@update',$category->id], 'class'=>'form-row']) !!}
+            {!! Form::model($category,['method'=>'PUT', 'action'=>['AdminCategoryController@update',$category->id], 'files'=>true, 'class'=>'form-row']) !!}
 
             <div class="form-group col-md-6">
                 {!! Form::label('name', 'Category name') !!}
                 {!! Form::text('name', null, ['class'=>'form-control']) !!}
+            </div>
+
+            <div class="form-group col-md-6">
+                {!! Form::label('photo', 'Icon') !!}
+                {!! Form::file('photo', ['class'=>'form-control-file']) !!}
             </div>
 
             <div class="form-grop col-md-6">

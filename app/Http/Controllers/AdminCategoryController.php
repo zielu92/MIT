@@ -31,6 +31,11 @@ class AdminCategoryController extends Controller
         $request->validate([
            'name'=>'required',
         ]);
+
+        if($request->file('photo')!=null) {
+            $photo = new Photo();
+            $request['photo_id'] = $photo->photoUpload($request->file('photo'), 'category_', 0);
+        }
         $category = Category::findOrFail($id);
         $category->update($request->all());
         return redirect('admin/categories');

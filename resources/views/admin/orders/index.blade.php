@@ -37,7 +37,7 @@
                         @foreach($orders->sortByDesc('id') as $order)
                             <tr>
                                 <td>{{ $order->id }}</td>
-                                <td>{{ $order->product->name }}</td>
+                                <td>{{ $order->product->title }}</td>
                                 <td>{{ $order->product->user->name }}</td>
                                 <td>{{ $order->user->name }}</td>
                             </tr>

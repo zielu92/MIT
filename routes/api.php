@@ -19,7 +19,7 @@ Route::group(['prefix' => 'auth'],function (){
     Route::get('product/{id}', 'ApiProductController@showProduct');
     Route::get('randomProducts', 'ApiProductController@randomProducts');
     Route::post('product', 'ApiProductController@storeProduct');
-    Route::post('order', 'ApiProductController@orderProduct');
+    Route::post('order', 'ApiOrderController@orderProduct');
 
 
     Route::post('login', 'ApiUserController@login');
